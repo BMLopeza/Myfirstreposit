@@ -48,7 +48,7 @@ scanf("%d", &option);
     fptr = fopen("data.txt", "r");
 
     if (fptr==NULL){
-        printf("error openining this file! (no users registered)\n");
+        printf("error opening this file! (no users registered)\n");
     return 1;
     }
     char file_user[40], file_pass[40];
@@ -193,12 +193,13 @@ scanf("%s", regisuser);
 printf("\nEnter your password: ");
 scanf("%s",regispassword);
 
+
 FILE *fwriteptr = fopen("data.txt", "a");
 if (fwriteptr == NULL){
     printf("Error opening file for writing.\n");
     return 1;
 }
-
+// this is to make a registration of the password as the user,
 fprintf(fwriteptr, "%s %s\n", regisuser, regispassword);
 fclose(fwriteptr);
 
