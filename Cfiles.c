@@ -43,7 +43,7 @@ scanf("%d", &option);
 
     printf("\nEnter your password:");
     scanf("%s", password);
-
+//to save the data of the user that is going to log into
     FILE *fptr;
     fptr = fopen("data.txt", "r");
 
